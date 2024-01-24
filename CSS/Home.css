@@ -1,0 +1,244 @@
+*{
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+#headCon{
+    margin-top: 5vw;
+    width: 100%;
+    height: 70vh;
+   border-radius: 10px;
+    display: flex;
+    background-color: rgb(235, 236, 239);
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px black;
+}
+#headCon{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 0.5vw;
+    margin-right: 6vw;
+    color: rgba(0, 0, 0, 0.583);
+}
+.imgDiv1{
+    width: 35%;
+    height: 70%;
+}
+#bed{
+    width: 60%;
+    height: 100%;
+    margin-left: 30%;
+
+}
+
+header {
+    height: 7vw;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.link{
+    margin-left: 1vw;
+    height: 3vw;
+    font-size: 1.3vw;
+    border-radius: 10px;
+    background-color: rgb(7, 215, 222);
+}
+#linkDiv{
+    margin-top: 2vw;
+    margin-left: -1vw;
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+nav{
+    width: 100%;
+    list-style-type: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    justify-content: space-around;
+    background-color: #333333a0;
+}
+li,a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+li:hover{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    box-shadow: 1px 1px 5px black;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    width: 12vw;
+    height: 100%;
+    letter-spacing: 0.15vw;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.203);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.511);
+}
+
+section {
+    margin-top: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+    width: 100%;
+}
+.infContainer{
+    width: 102%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+img{
+    width: 46%;
+    height: 20vw;
+    margin: 1.5vw;
+}
+img:hover{
+    transform: scale(1.05);
+    z-index: 1;
+}
+h2{
+    font-size: 2vw;
+    letter-spacing: 0.3vw;
+}
+h4{
+    letter-spacing: 0.1vw;
+    text-transform: capitalize;
+    font-size: 1.4vw;
+    color: green;
+    margin-top: 1vw;
+    margin-bottom: 0.2vw;  
+}
+p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 1vw;
+    text-align: justify;
+    word-spacing: 0.2vw;
+    margin-top: 0.9vw;
+    margin-bottom: 0.5vw;
+}
+span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 1vw;
+    font-size: 1vw;
+    font-weight: bold;}
+#s1{
+    margin-left: 5vw;
+}
+#s2{
+    margin-left: 4.6vw;
+}
+#s3{
+    margin-left: 4.8vw;
+}
+#s4{
+    margin-left:  2.5vw;
+}
+#s5{
+    margin-left: 3.8vw;
+}
+#s6{
+    margin-left: 7vw;
+}
+#s7{
+    margin-left: 7.2vw;
+}
+#s8{
+    margin-left: 8.5vw;
+}
+summary{
+    font-size: 1.2vw;
+    margin-top: 0.8vw;
+    font-weight: bold;
+}
+nav  {
+    height: 5vw;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(9, 193, 218);
+}
+#navbutton{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbutton1{
+    height: 100%;
+    width: 40%;
+    color: white;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+i{
+    font-size: 2.5vw;
+    font-family: 'Sevillana', cursive;
+}
+.Projectlinl{
+    color: blue;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#con,#upArrow{
+
+    width: 2vw;
+    height: 2vw;
+    position: fixed;
+    scroll-behavior: smooth;
+    bottom: 3vw;
+    right: 2vw;
+}
+#upArrow{
+    z-index: 10;
+}
+#upArrow:hover{
+    transform: scale(1.3);
+}
+#con{
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    scroll-behavior: smooth;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
