@@ -143,44 +143,24 @@ h4{
 p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     word-spacing: 1vw;
+    font-size: 1.3vw;
     text-align: justify;
     word-spacing: 0.2vw;
     margin-top: 0.9vw;
     margin-bottom: 0.5vw;
 }
-span{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    word-spacing: 1vw;
-    font-size: 1vw;
-    font-weight: bold;}
-#s1{
-    margin-left: 5vw;
+#nameDetail{
+    width: 95%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
 }
-#s2{
-    margin-left: 4.6vw;
+.nameDetailChild{
+    width: 20%;
+    height: 100%;
 }
-#s3{
-    margin-left: 4.8vw;
-}
-#s4{
-    margin-left:  2.5vw;
-}
-#s5{
-    margin-left: 3.8vw;
-}
-#s6{
-    margin-left: 7vw;
-}
-#s7{
-    margin-left: 7.2vw;
-}
-#s8{
-    margin-left: 8.5vw;
-}
-summary{
-    font-size: 1.2vw;
-    margin-top: 0.8vw;
-    font-weight: bold;
+.nameDetailChild2{
+    width: 60%;
 }
 nav  {
     height: 5vw;
