@@ -55,7 +55,8 @@ function Home() {
                 {" "}
                 UPI payment systems
               </span>
-              for
+               {" "} 
+               for
               <span className="font-semibold text-purple-700">
                 {" "}
                 Union Bank of India
