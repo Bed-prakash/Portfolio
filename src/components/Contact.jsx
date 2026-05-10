@@ -1,3 +1,5 @@
+import SocialButtons from "./SocialButtons";
+
 function Contact() {
   return (
     <section className="bg-gray-100 flex items-center justify-center ">
@@ -63,26 +65,8 @@ function Contact() {
           </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-6 mt-16">
-          {/* GitHub */}
-          <a
-            href="https://github.com/"
-            target="_blank"
-            className="flex items-center justify-center bg-black text-white text-lg font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 w-40"
-          >
-            GitHub
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            className="flex items-center justify-center bg-blue-600 text-white text-lg font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 w-40"
-          >
-            LinkedIn
-          </a>
-        </div>
+        {/* Social Media Buttons */}
+        <SocialButtons />
       </div>
     </section>
   );

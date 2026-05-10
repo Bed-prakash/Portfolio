@@ -1,4 +1,5 @@
 import bed from "../assets/bed_img.png";
+import SocialButtons from "./SocialButtons";
 
 function Home() {
   return (
@@ -65,24 +66,8 @@ function Home() {
             </p>
           </div>
 
-          {/* Buttons */}
-          <div className="flex gap-6 mt-6">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="w-full flex items-center justify-center bg-black text-white text-lg font-semibold px-10 py-4 rounded-md shadow-xl hover:bg-gray-800 hover:scale-105 transition-all duration-300 text-center"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              className="w-full flex items-center justify-center bg-blue-600 text-white text-lg font-semibold px-10 py-4 rounded-md shadow-xl hover:bg-blue-700 hover:scale-105 transition-all duration-300 text-center"
-            >
-              LinkedIn
-            </a>
-          </div>
+          {/* Social Media Buttons */}
+          <SocialButtons />
         </div>
 
         {/* Right Image */}
