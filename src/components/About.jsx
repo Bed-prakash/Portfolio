@@ -102,6 +102,17 @@ function About() {
                     Git, GitHub, Jenkins, Jira, Maven, Gradle
                   </p>
                 </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-emerald-700 mb-2">
+                    Tools, Editors & DevOps
+                  </h3>
+
+                  <p className="text-gray-700 text-base leading-7">
+                    Git, GitHub, Jenkins, Jira, Maven, Gradle, Eclipse, IntelliJ
+                    IDEA, VS Code, Postman
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ const navLinkClass = ({ isActive }) =>
 
           {/* Logo */}
           <h1 className='text-xl sm:text-2xl font-bold'>
-            Bedprakash Portfolio
+            Bed Prakash Portfolio
           </h1>
 
           {/* Desktop Menu */}
