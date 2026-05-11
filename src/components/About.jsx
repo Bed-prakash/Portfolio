@@ -135,7 +135,7 @@ function About() {
                   </h3>
 
                   <p className="text-blue-700 text-lg font-semibold mt-2">
-                    Software Developer Engineer (SDE-1)
+                    Software Developer Engineer (SDE-II)
                   </p>
                 </div>
 
