@@ -137,6 +137,11 @@ function About() {
                   <p className="text-blue-700 text-lg font-semibold mt-2">
                     Software Developer Engineer (SDE-II)
                   </p>
+            
+                  <p className="text-gray-700 text-base mt-3 flex items-center gap-2">
+                    <span className="text-lg">🏦</span>
+                    Unified Payments Interface (UPI) – Union Bank of India (UBI)
+                  </p>
                 </div>
 
                 <div className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-medium shadow-md">

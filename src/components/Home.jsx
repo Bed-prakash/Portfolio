@@ -1,5 +1,6 @@
 import bed from "../assets/bed_img.png";
 import SocialButtons from "./SocialButtons";
+import TechTags from "./TechTags";
 
 function Home() {
   return (
@@ -35,9 +36,9 @@ function Home() {
           <p className="text-gray-600 text-base leading-8 text-justify">
 
             Passionate Java Full Stack Developer with 2+ years of experience in
-            building scalable enterprise applications, secure banking systems
+            building scalable enterprise applications, secure banking systems,
             and responsive web applications using Java, Spring Boot, SQL,
-            React JS and modern frontend technologies.
+            React JS, and modern frontend technologies.
 
           </p>
 
@@ -56,8 +57,8 @@ function Home() {
             </div>
 
             {/* Role */}
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Software Developer Engineer (SDE-II)
+            <h3 className="text-2xl md:text-2xl font-bold text-gray-900 mb-4">
+              Software Development Engineer (SDE-II)
             </h3>
 
             {/* Company */}
@@ -82,10 +83,13 @@ function Home() {
               </span>
 
               . Focused on transaction processing, payment workflows,
-              API integrations and enterprise banking solutions using
-              Java, Spring Boot and modern technologies.
+              API integrations, and enterprise banking solutions using
+              Java, Spring Boot, and modern technologies.
 
             </p>
+
+            {/* Tech Tags */}
+            <TechTags />
 
           </div>
 
