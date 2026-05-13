@@ -146,28 +146,31 @@ function About() {
 
               <div className="space-y-4 text-gray-700 text-base leading-7">
                 <p>
-                  ✔ Developed UPI payment modules and transaction management
-                  systems using Spring Boot and Java.
+                  ✔ Developed and implemented UPI payment features including payment
+                  flow, transaction management, UPI Lite, and Delegate Payment
+                  functionalities using Spring Boot and Java.
                 </p>
 
                 <p>
-                  ✔ Worked on Delegate Payment and OC181 implementation for
-                  Unified Payment Interface (UPI) solutions.
+                  ✔ Collaborated on new implementations such as Delegate Payment and
+                  OC-181 features for Unified Payment Interface (UPI) enhancements.
                 </p>
 
                 <p>
-                  ✔ Built responsive frontend applications using React JS and
-                  Tailwind CSS.
+                  ✔ Developed optimized applications using Spring Boot, JPA,
+                  JavaScript, and Microservices, improving application performance
+                  and reducing page load times by 30%.
                 </p>
 
                 <p>
-                  ✔ Developed secure DCB Bank IPO Lien Removal workflows with
-                  approval and reporting systems.
+                  ✔ Achieved 90% code coverage using Mockito for robust unit testing
+                  and improved application reliability.
                 </p>
 
                 <p>
-                  ✔ Improved application performance through API optimization
-                  and clean architecture practices.
+                  ✔ Contributed to user growth and incremental revenue by optimizing
+                  product features, enhancing user acquisition strategies, and
+                  supporting annual team goals.
                 </p>
               </div>
             </div>
