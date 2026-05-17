@@ -19,8 +19,29 @@ import {
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ContactToast from "./common/ContactToast";
+import { PROFILE } from "./common/constant";
 
 function Contact() {
+
+  const {
+  email = "bedprakash61299@gmail.com",
+  mobile = "+91-7999816206",
+  location = "Hyderabad, Telangana, India",
+  collage = "RSR Rungta College of Engineering and Technology",
+  collageCity = "  Bhilai, Chhattisgarh ",
+  collageWebside = "https://www.rungtacolleges.com/",
+  univercity = " Chhattisgarh Swami Vivekananda Technical University ",
+  experience = "2+ Years",
+  availability = "Full Time",
+  role = " Java Full Stack Developer ",
+  linkedin = "https://linkedin.com/in",
+  github = "https://github.com",
+  resume = "/Portfolio/resume/Bedprakash_Resume.pdf",
+  resumeFileName = "Bedprakash_Resume.pdf",
+  companyLocation = "https://maps.google.com/?q=Olive+Crypto+Systems+Hyderabad",
+} = PROFILE || {};
+  
   const form = useRef();
 
   // Toast Only
@@ -85,9 +106,7 @@ function Contact() {
             >
               {title}
             </h2>
-
             <p className="text-gray-800 text-lg font-semibold">{value}</p>
-
             <p className="text-gray-500 text-sm mt-1">{subText}</p>
           </div>
         </div>
@@ -96,7 +115,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f9fc] px-4 md:px-10 py-12 overflow-hidden relative">
+    <div className="min-h-screen bg-[#f7f9fc] px-4 md:px-4 py-4 overflow-hidden relative">
       {/* Toast */}
       <ToastContainer
         position="bottom-right"
@@ -134,35 +153,44 @@ function Contact() {
 
         {/* First Row */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <InfoCard
-            icon={<FaEnvelope />}
-            title="Email"
-            value="bedprakash61299@gmail.com"
-            subText="I'll respond as soon as possible"
-            borderColor="border-blue-100"
-            iconBg="bg-gradient-to-br from-blue-500 to-blue-700"
-            titleColor="text-blue-600"
-          />
+          <a href="mailto:bedprakash61299@gmail.com">
+            <InfoCard
+              icon={<FaEnvelope />}
+              title="Email"
+              value={email}
+              subText="I'll respond as soon as possible"
+              borderColor="border-blue-100"
+              iconBg="bg-gradient-to-br from-blue-500 to-blue-700"
+              titleColor="text-blue-600"
+            />
+          </a>
 
-          <InfoCard
-            icon={<FaPhoneAlt />}
-            title="Phone"
-            value="+91 7999816206"
-            subText="Mon - Sat, 9:00 AM - 7:00 PM"
-            borderColor="border-green-100"
-            iconBg="bg-gradient-to-br from-green-400 to-green-600"
-            titleColor="text-green-600"
-          />
-
-          <InfoCard
-            icon={<FaMapMarkerAlt />}
-            title="Location"
-            value="Hyderabad, Telangana, India"
-            subText="Available for remote work"
-            borderColor="border-purple-100"
-            iconBg="bg-gradient-to-br from-purple-500 to-violet-700"
-            titleColor="text-purple-600"
-          />
+          <a href={`tel:${mobile}`}>
+            <InfoCard
+              icon={<FaPhoneAlt />}
+              title="Phone"
+              value={mobile}
+              subText="Mon - Sat, 9:00 AM - 7:00 PM"
+              borderColor="border-green-100"
+              iconBg="bg-gradient-to-br from-green-400 to-green-600"
+              titleColor="text-green-600"
+            />
+          </a>
+          <a
+            href={companyLocation}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InfoCard
+              icon={<FaMapMarkerAlt />}
+              title="Location"
+              value={location}
+              subText="Available for remote work"
+              borderColor="border-purple-100"
+              iconBg="bg-gradient-to-br from-purple-500 to-violet-700"
+              titleColor="text-purple-600"
+            />
+          </a>
         </div>
 
         {/* Second Row */}
@@ -170,32 +198,39 @@ function Contact() {
           <InfoCard
             icon={<FaBriefcase />}
             title="Experience"
-            value="2+ Years"
-            subText="Java Full Stack Development"
+            value={experience}
+            subText={role}
             borderColor="border-orange-100"
             iconBg="bg-gradient-to-br from-orange-400 to-orange-600"
             titleColor="text-orange-500"
           />
 
-          <InfoCard
-            icon={<FaGraduationCap />}
-            title="Education"
-            value="B.Tech (EE)"
-            subText="Electrical Engineering"
-            borderColor="border-pink-100"
-            iconBg="bg-gradient-to-br from-pink-400 to-pink-600"
-            titleColor="text-pink-500"
-          />
-
-          <InfoCard
-            icon={<FaGlobe />}
-            title="Availability"
-            value="Full Time"
-            subText="Open to new opportunities"
-            borderColor="border-cyan-100"
-            iconBg="bg-gradient-to-br from-cyan-400 to-cyan-600"
-            titleColor="text-cyan-500"
-          />
+          <a
+            href={collageWebside}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InfoCard
+              icon={<FaGraduationCap />}
+              title="Education"
+              value={collage}
+              subText={collageCity}
+              borderColor="border-pink-100"
+              iconBg="bg-gradient-to-br from-pink-400 to-pink-600"
+              titleColor="text-pink-500"
+            />
+          </a>
+          <div onClick={ContactToast()} className="cursor-pointer">
+            <InfoCard
+              icon={<FaGlobe />}
+              title="Availability"
+              value="Full Time"
+              subText="Open to new opportunities"
+              borderColor="border-cyan-100"
+              iconBg="bg-gradient-to-br from-cyan-400 to-cyan-600"
+              titleColor="text-cyan-500"
+            />
+          </div>
         </div>
 
         {/* Main Section */}
@@ -221,50 +256,19 @@ function Contact() {
               {/* Social */}
               <div className="flex gap-5">
                 <a
-                  href="https://github.com/Bed-prakash"
+                  href={github}
                   target="_blank"
                   rel="noreferrer"
-                  className="
-                    w-14
-                    h-14
-                    rounded-xl
-                    border
-                    border-gray-200
-                    bg-white
-                    flex
-                    items-center
-                    justify-center
-                    text-2xl
-                    hover:-translate-y-1
-                    transition
-                    duration-300
-                    shadow-md
-                  "
+                  className="w-14 h-14 rounded-xl border border-gray-200 bg-white flex items-center justify-center text-2xl hover:-translate-y-1 transition duration-300 shadow-md"
                 >
                   <FaGithub />
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/bedprakash-choudhary/"
+                  href={linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="
-                    w-14
-                    h-14
-                    rounded-xl
-                    border
-                    border-gray-200
-                    bg-white
-                    flex
-                    items-center
-                    justify-center
-                    text-[#0077b5]
-                    text-2xl
-                    hover:-translate-y-1
-                    transition
-                    duration-300
-                    shadow-md
-                  "
+                  className="w-14 h-14 rounded-xl border border-gray-200 bg-white flex items-center justify-center text-[#0077b5] text-2xl hover:-translate-y-1 transition duration-300 shadow-md"
                 >
                   <FaLinkedin />
                 </a>
@@ -272,27 +276,11 @@ function Contact() {
                 <button
                   onClick={() =>
                     window.open(
-                      "/Portfolio/resume/Bedprakash_Resume.pdf",
+                      resume,
                       "_blank",
                     )
                   }
-                  className="
-      w-14
-      h-14
-      rounded-xl
-      bg-gradient-to-r
-      from-blue-600
-      to-indigo-700
-      text-white
-      flex
-      items-center
-      justify-center
-      text-2xl
-      hover:-translate-y-1
-      transition
-      duration-300
-      shadow-md
-    "
+                  className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white flex items-center justify-center text-2xl hover:-translate-y-1 transition duration-300 shadow-md"
                 >
                   <FaEye />
                 </button>
@@ -301,34 +289,13 @@ function Contact() {
                 <button
                   onClick={() => {
                     const link = document.createElement("a");
-
-                    link.href = "/Portfolio/resume/Bedprakash_Resume.pdf";
-
-                    link.download = "Bedprakash_Resume.pdf";
-
+                    link.href = resume;
+                    link.download = resumeFileName;
                     document.body.appendChild(link);
-
                     link.click();
-
                     document.body.removeChild(link);
                   }}
-                  className="
-      w-14
-      h-14
-      rounded-xl
-      border-2
-      border-blue-600
-      text-blue-600
-      flex
-      items-center
-      justify-center
-      text-2xl
-      hover:bg-blue-600
-      hover:text-white
-      transition
-      duration-300
-      shadow-md
-    "
+                  className="w-14 h-14 rounded-xl border-2 border-blue-600 text-blue-600 flex items-center justify-center text-2xl hover:bg-blue-600 hover:text-white transition duration-300 shadow-md"
                 >
                   <FaDownload />
                 </button>
@@ -350,17 +317,7 @@ function Contact() {
                     name="user_name"
                     placeholder="Your Name"
                     required
-                    className="
-                      w-full
-                      border
-                      border-gray-300
-                      rounded-xl
-                      pl-14
-                      pr-5
-                      py-4
-                      outline-none
-                      focus:border-blue-500
-                    "
+                    className="w-full border border-gray-300 rounded-xl pl-14 pr-5 py-4 outline-none focus:border-blue-500"
                   />
                 </div>
 
@@ -373,17 +330,7 @@ function Contact() {
                     name="user_email"
                     placeholder="Your Email"
                     required
-                    className="
-                      w-full
-                      border
-                      border-gray-300
-                      rounded-xl
-                      pl-14
-                      pr-5
-                      py-4
-                      outline-none
-                      focus:border-blue-500
-                    "
+                    className="w-full border border-gray-300 rounded-xl pl-14 pr-5 py-4 outline-none focus:border-blue-500"
                   />
                 </div>
               </div>
@@ -397,17 +344,7 @@ function Contact() {
                   name="subject"
                   placeholder="Subject"
                   required
-                  className="
-                    w-full
-                    border
-                    border-gray-300
-                    rounded-xl
-                    pl-14
-                    pr-5
-                    py-4
-                    outline-none
-                    focus:border-blue-500
-                  "
+                  className="w-full border border-gray-300 rounded-xl pl-14 pr-5 py-4 outline-none focus:border-blue-500"
                 />
               </div>
 
@@ -420,43 +357,14 @@ function Contact() {
                   name="message"
                   placeholder="Your Message"
                   required
-                  className="
-                    w-full
-                    border
-                    border-gray-300
-                    rounded-xl
-                    pl-14
-                    pr-5
-                    py-4
-                    outline-none
-                    focus:border-blue-500
-                    resize-none
-                  "
+                  className="w-full border border-gray-300 rounded-xl pl-14 pr-5 py-4 outline-none focus:border-blue-500 resize-none"
                 ></textarea>
               </div>
 
               {/* Button */}
               <button
                 type="submit"
-                className="
-                  w-full
-                  bg-gradient-to-r
-                  from-blue-600
-                  to-blue-500
-                  text-white
-                  py-4
-                  rounded-xl
-                  text-lg
-                  font-bold
-                  hover:scale-[1.01]
-                  transition
-                  duration-300
-                  shadow-lg
-                  flex
-                  items-center
-                  justify-center
-                  gap-3
-                "
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 rounded-xl text-lg font-bold hover:scale-[1.01] transition duration-300 shadow-lg flex items-center justify-center gap-3"
               >
                 <FaPaperPlane />
                 Send Message

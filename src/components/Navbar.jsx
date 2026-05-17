@@ -1,13 +1,16 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { PROFILE } from './common/constant';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-
-const navLinkClass = ({ isActive }) =>
-  isActive
-    ? 'relative text-blue-500 font-semibold after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-full after:bg-blue-500 after:transition-all after:duration-500'
-    : 'relative hover:text-blue-400 after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-400 after:transition-all after:duration-500 transition duration-300'
+  const {
+      name = "Bed Prakash",
+      } = PROFILE || {};
+  const navLinkClass = ({ isActive }) =>
+    isActive
+      ? 'relative text-blue-500 font-semibold after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-full after:bg-blue-500 after:transition-all after:duration-500'
+      : 'relative hover:text-blue-400 after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-400 after:transition-all after:duration-500 transition duration-300'
 
   return (
     <nav className='bg-black text-white shadow-md sticky top-0 z-50'>
@@ -18,7 +21,7 @@ const navLinkClass = ({ isActive }) =>
 
           {/* Logo */}
           <h1 className='text-xl sm:text-2xl font-bold'>
-            Bed Prakash Portfolio
+            {name} Portfolio
           </h1>
 
           {/* Desktop Menu */}

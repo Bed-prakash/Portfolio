@@ -1,6 +1,29 @@
+import { FaBriefcase, FaBuilding, FaCode, FaGraduationCap, FaPenNib, FaUserTie } from "react-icons/fa";
+import { experiencePoints, PROFILE } from "./common/constant";
+// import { BiBriefcaseAlt } from "react-i  
+import { GraduationCap, Briefcase, Code2 } from "lucide-react";
 function About() {
+  const {
+    role = " Java Full Stack Developer ",
+    designation = " Software Development Engineer (SDE-II) ",
+    univercity = " Chhattisgarh Swami Vivekananda Technical University (CSVTU) ",
+    experience = " 2+ Years ",
+    domain = "Unified Payments Interface (UPI) ",
+    industry = " Fintech & Banking Systems ",
+    client = " Union Bank of India (UBI)",
+    company = " Olive Crypto System Pvt. Ltd. ",
+    frontend = " React JS | HTML5 | CSS3 | JavaScript | Tailwind CSS ",
+    backend = " Java | Spring Boot | Spring MVC | REST APIs | Microservices ",
+    databases = " Oracle SQL | MySQL | PostgreSQL ",
+    tools = " Git | Postman | Swagger | VS Code | IntelliJ IDEA | Eclipse IDE | Maven | Gradle ",
+    devops = " Azure DevOps | Jenkins | Bitbucket | Jira ",
+    communication = " Outlook | Microsoft Teams | Zoho | Keka ",
+    fromDateToPresent = " May 2024 - Present ",
+    degree = " Bachelor of Technology (B.Tech) ",
+    streamWithCgpa = " Electrical Engineering: 8.73 / 10 ",
+  } = PROFILE || {};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-4 md:px-10 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-4 py-4">
       {/* Main Container */}
       <div className="max-w-7xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden">
         {/* Hero Section */}
@@ -10,14 +33,13 @@ function About() {
           </p>
 
           <h1 className="text-3xl md:text-6xl font-extrabold leading-tight mb-6">
-            Full Stack <br />
-            Java Developer
+            {role}
           </h1>
 
           <p className="max-w-4xl text-base md:text-xl leading-8 text-blue-100">
-            Passionate Full Stack Developer with 2+ years of experience building
-            scalable enterprise applications, secure banking systems and
-            responsive web applications using Java, Spring Boot and React JS.
+            Passionate Full Stack Developer with {PROFILE.experience} of experience building
+            scalable enterprise applications, secure {industry} and
+            responsive web applications using {role}.
           </p>
         </div>
 
@@ -27,25 +49,27 @@ function About() {
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Professional Summary */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-3xl shadow-lg border border-blue-100 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                Professional Summary
-              </h2>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-2xl shadow-md">
+                  <FaPenNib className="text-white w-6 h-6" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  Professional Summary
+                </h2>
+              </div>
 
               <div className="space-y-5 text-gray-700 text-base leading-8">
                 <p>
                   Results-driven Full Stack Software Engineer experienced in
-                  enterprise-level application development and banking
-                  solutions.
+                  enterprise-level application development and {industry.trim()}.
                 </p>
 
                 <p>
-                  Strong backend expertise in Java, Spring Boot, REST APIs,
-                  Hibernate and Microservices architecture.
+                  Strong backend expertise in {backend.replaceAll(" |",",")} architecture.
                 </p>
 
                 <p>
-                  Experienced in frontend technologies including React JS,
-                  JavaScript, HTML, CSS and Tailwind CSS.
+                  Experienced in frontend technologies including {frontend.replaceAll(" |",",")}.
                 </p>
 
                 <p>
@@ -57,9 +81,14 @@ function About() {
 
             {/* Technical Skills */}
             <div className="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-3xl shadow-lg border border-pink-100 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-                Technical Skills
-              </h2>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-2xl shadow-md">
+                  <FaUserTie className="text-white w-7 h-7" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  Technical Skills
+                </h2>
+              </div>
 
               <div className="space-y-7">
                 <div>
@@ -68,8 +97,7 @@ function About() {
                   </h3>
 
                   <p className="text-gray-700 text-base leading-7">
-                    Java, Spring Boot, REST APIs, Hibernate, Spring MVC,
-                    Microservices
+                    {backend.replaceAll(" |",",")}
                   </p>
                 </div>
 
@@ -79,7 +107,7 @@ function About() {
                   </h3>
 
                   <p className="text-gray-700 text-base leading-7">
-                    React JS, HTML, CSS, JavaScript, Tailwind CSS
+                    {frontend.replaceAll(" |",",")}
                   </p>
                 </div>
 
@@ -89,7 +117,7 @@ function About() {
                   </h3>
 
                   <p className="text-gray-700 text-base leading-7">
-                    Oracle SQL, MySQL, PostgreSQL
+                    {databases.replaceAll(" |",",")}
                   </p>
                 </div>
 
@@ -99,7 +127,7 @@ function About() {
                   </h3>
 
                   <p className="text-gray-700 text-base leading-7">
-                    Git, GitHub, Jenkins, Jira, Maven, Gradle
+                      {devops.replaceAll(" |",",")}
                   </p>
                 </div>
 
@@ -109,8 +137,7 @@ function About() {
                   </h3>
 
                   <p className="text-gray-700 text-base leading-7">
-                    Git, GitHub, Jenkins, Jira, Maven, Gradle, Eclipse, IntelliJ
-                    IDEA, VS Code, Postman
+                      {tools.replaceAll(" |",",") +", "+devops.replaceAll(" |",",")}
                   </p>
                 </div>
               </div>
@@ -120,6 +147,10 @@ function About() {
           {/* Experience */}
           <div className="mt-20">
             <div className="flex items-center gap-5 mb-10">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-2xl shadow-md">
+                <FaBriefcase className="text-white w-7 h-7" />
+              </div>
+
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 whitespace-nowrap">
                 Experience
               </h2>
@@ -130,53 +161,36 @@ function About() {
             <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-8 md:p-10 rounded-3xl shadow-lg border border-blue-100 hover:shadow-2xl transition duration-300">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5 mb-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    Olive Crypto System Pvt. Ltd.
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-2 rounded-xl shadow-md">
+                      <FaBuilding className="text-white w-5 h-5" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {company}
+                    </h3>
+                  </div>
 
                   <p className="text-blue-700 text-lg font-semibold mt-2">
-                    Software Developer Engineer (SDE-II)
+                    {designation}
                   </p>
             
                   <p className="text-gray-700 text-base mt-3 flex items-center gap-2">
                     <span className="text-lg">🏦</span>
-                    Unified Payments Interface (UPI) – Union Bank of India (UBI)
+                    {domain+" - "+client}
                   </p>
                 </div>
 
                 <div className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-medium shadow-md">
-                  May 2024 - Present
+                  {fromDateToPresent}
                 </div>
               </div>
 
               <div className="space-y-4 text-gray-700 text-base leading-7">
-                <p>
-                  ✔ Developed and implemented UPI payment features including payment
-                  flow, transaction management, UPI Lite, and Delegate Payment
-                  functionalities using Spring Boot and Java.
-                </p>
-
-                <p>
-                  ✔ Collaborated on new implementations such as Delegate Payment and
-                  OC-181 features for Unified Payment Interface (UPI) enhancements.
-                </p>
-
-                <p>
-                  ✔ Developed optimized applications using Spring Boot, JPA,
-                  JavaScript, and Microservices, improving application performance
-                  and reducing page load times by 30%.
-                </p>
-
-                <p>
-                  ✔ Achieved 90% code coverage using Mockito for robust unit testing
-                  and improved application reliability.
-                </p>
-
-                <p>
-                  ✔ Contributed to user growth and incremental revenue by optimizing
-                  product features, enhancing user acquisition strategies, and
-                  supporting annual team goals.
-                </p>
+                {experiencePoints?.map((point, index) => (
+                  <p key={index}>
+                    ✔ {point}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -184,6 +198,9 @@ function About() {
           {/* Education */}
           <div className="mt-20">
             <div className="flex items-center gap-5 mb-10">
+              <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-3 rounded-2xl shadow-md">
+                <GraduationCap className="text-white w-7 h-7" />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 whitespace-nowrap">
                 Education
               </h2>
@@ -197,11 +214,11 @@ function About() {
               </h3>
 
               <p className="text-lg text-gray-700 leading-7">
-                Chhattisgarh Swami Vivekananda Technical University (CSVTU)
+                {univercity}
               </p>
 
               <p className="text-base text-indigo-700 font-semibold mt-3">
-                Electrical Engineering • CGPA: 8.73 / 10
+                {streamWithCgpa}
               </p>
             </div>
           </div>

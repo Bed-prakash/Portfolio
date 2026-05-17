@@ -1,11 +1,19 @@
 import { FaGithub, FaLinkedin, FaFileAlt, FaDownload } from "react-icons/fa";
+import { PROFILE } from "./common/constant";
 
 function SocialButtons() {
+  // const {
+  //   linkedin = "https://linkedin.com/in/bedprakash-choudhary/",
+  //   github = "https://github.com/Bed-prakash",
+  //   resume = "/Portfolio/resume/Bedprakash_Resume.pdf",
+  //   resumeFileName = "Bedprakash_Resume.pdf",
+  // } = PROFILE || {};
+  
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 w-full">
+    <div className="grid grid-cols-1 gap-5 w-full">
       {/* GitHub */}
       <a
-        href="https://github.com/Bed-prakash"
+        href={PROFILE.github}
         target="_blank"
         rel="noreferrer"
         className="
@@ -33,7 +41,7 @@ function SocialButtons() {
 
       {/* LinkedIn */}
       <a
-        href="https://www.linkedin.com/in/bedprakash-choudhary/"
+        href={PROFILE.linkedin}
         target="_blank"
         rel="noreferrer"
         className="
@@ -61,9 +69,7 @@ function SocialButtons() {
 
       {/* View Resume */}
       <button
-        onClick={() =>
-          window.open("/Portfolio/resume/Bedprakash_Resume.pdf", "_blank")
-        }
+        onClick={() => window.open(PROFILE.resume, "_blank")}
         className="
           w-full
           bg-gradient-to-r
@@ -93,8 +99,8 @@ function SocialButtons() {
       <button
         onClick={() => {
           const link = document.createElement("a");
-          link.href = "/Portfolio/resume/Bedprakash_Resume.pdf";
-          link.download = "Bedprakash_Resume.pdf";
+          link.href = PROFILE.resume;
+          link.download = resumeFileName;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
