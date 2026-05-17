@@ -61,6 +61,7 @@ function Contact() {
     borderColor,
     iconBg,
     titleColor,
+    valueClassName,
   }) => {
     return (
       <div
@@ -106,7 +107,7 @@ function Contact() {
             >
               {title}
             </h2>
-            <p className="text-gray-800 text-lg font-semibold">{value}</p>
+            <p className={`text-gray-800 text-lg font-semibold ${valueClassName}`}>{value}</p>
             <p className="text-gray-500 text-sm mt-1">{subText}</p>
           </div>
         </div>
@@ -162,18 +163,20 @@ function Contact() {
               borderColor="border-blue-100"
               iconBg="bg-gradient-to-br from-blue-500 to-blue-700"
               titleColor="text-blue-600"
+              valueClassName="break-all"
             />
           </a>
 
           <a href={`tel:${mobile}`}>
             <InfoCard
-              icon={<FaPhoneAlt />}
+              icon={<FaPhoneAlt/>}
               title="Phone"
               value={mobile}
               subText="Mon - Sat, 9:00 AM - 7:00 PM"
               borderColor="border-green-100"
               iconBg="bg-gradient-to-br from-green-400 to-green-600"
               titleColor="text-green-600"
+              valueClassName="break-all"
             />
           </a>
           <a
@@ -189,6 +192,7 @@ function Contact() {
               borderColor="border-purple-100"
               iconBg="bg-gradient-to-br from-purple-500 to-violet-700"
               titleColor="text-purple-600"
+              valueClassName="break-all"
             />
           </a>
         </div>
