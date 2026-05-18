@@ -1,6 +1,7 @@
+import bedImg from "/assets/bed_img.png";
 export const PROFILE = {
   name: " Bed Prakash ",
-  profileImage: "/assets/bed_img.png",
+  profileImage: bedImg,
   availability: " Full Time ",
   collage: "  RSR Rungta College ",
   collageCity: "  Bhilai, Chhattisgarh ",
