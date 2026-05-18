@@ -1,4 +1,3 @@
-import bed from "/assets/bed_img.png";
 import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
@@ -19,6 +18,7 @@ function Home() {
     frontend = " React JS | HTML5 | CSS3 | JavaScript | Tailwind CSS ",
     backend = " Java | Spring Boot | REST APIs | Oracle SQL | Microservices ",
     databases = " Oracle SQL | MySQL | PostgreSQL ",
+    profileImage = "/Portfolio/public/assets/bed_img.png",
   } = PROFILE || {};
   return (
     <section className="min-h-screen bg-gray-100">
@@ -89,7 +89,7 @@ function Home() {
         {/* Right Image */}
         <div className="flex flex-col items-center-safe md:mt-10">
           <img
-            src={bed}
+            src={profileImage}
             alt={name}
             className="md:mt-10 w-full max-w-[500px] sm:max-w-[410px] md:max-w-[450px] h-[500px] md:h-[460px] rounded-3xl shadow-2xl object-cover hover:scale-[1.02] transition duration-500"
           />
