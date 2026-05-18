@@ -1,4 +1,4 @@
-import { techHashTags } from "./common/constant";
+import { techHashTags } from "./common/Constant";
 
 
 function TechTags() {

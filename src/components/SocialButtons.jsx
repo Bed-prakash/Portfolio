@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaFileAlt, FaDownload } from "react-icons/fa";
-import { PROFILE } from "./common/constant";
+import { PROFILE } from "./common/Constant";
 
 function SocialButtons() {
   // const {
