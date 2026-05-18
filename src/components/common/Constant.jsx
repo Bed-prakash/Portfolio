@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: " Bed Prakash ",
-  profileImage: "/Portfolio/public/assets/bed_img.png",
+  profileImage: "/public/assets/bed_img.png",
   availability: " Full Time ",
   collage: "  RSR Rungta College ",
   collageCity: "  Bhilai, Chhattisgarh ",
