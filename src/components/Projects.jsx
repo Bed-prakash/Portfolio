@@ -1,6 +1,6 @@
   import { useState } from "react";
 
-import { projects } from "./common/constant";
+import { projects } from "./common/Constant";
 
   function Projects() {
     const [openIndex, setOpenIndex] = useState(null);
@@ -248,7 +248,7 @@ import { projects } from "./common/constant";
   //   ];
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-4 py-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-2 py-2 mt-4">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-14">
@@ -304,7 +304,7 @@ import { projects } from "./common/constant";
                     {project.tech}
                   </p>
 
-                  <p className="text-gray-600 text-[15px] leading-7 mb-5">
+                  <p className="text-gray-600 text-[15px] leading-7 mb-5 text-justify">
                     {project.desc}
                   </p>
 

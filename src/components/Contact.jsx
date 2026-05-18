@@ -20,7 +20,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContactToast from "./common/ContactToast";
-import { PROFILE } from "./common/constant";
+import { PROFILE } from "./common/Constant";
 
 function Contact() {
 
@@ -64,35 +64,9 @@ function Contact() {
     valueClassName,
   }) => {
     return (
-      <div
-        className={`
-          bg-white
-          border
-          ${borderColor}
-          rounded-3xl
-          shadow-lg
-          p-8
-          hover:-translate-y-2
-          hover:shadow-2xl
-          transition
-          duration-300
-        `}
-      >
+      <div className={`bg-white border ${borderColor} rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300`}>
         <div className="flex items-center gap-5">
-          <div
-            className={`
-              w-16
-              h-16
-              rounded-full
-              ${iconBg}
-              flex
-              items-center
-              justify-center
-              text-white
-              text-3xl
-              shadow-lg
-            `}
-          >
+          <div className={`w-16 h-16 rounded-full ${iconBg} flex items-center justify-center text-white text-3xl shadow-lg`}>
             {icon}
           </div>
 
@@ -116,7 +90,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f9fc] px-4 md:px-4 py-4 overflow-hidden relative">
+    <div className="min-h-screen bg-[#f7f9fc] px-2 md:px-2 py-2 overflow-hidden relative mt-4">
       {/* Toast */}
       <ToastContainer
         position="bottom-right"
@@ -242,7 +216,6 @@ function Contact() {
           {/* Left Side */}
           <div className="p-12 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-indigo-50 opacity-70"></div>
-
             <div className="relative z-10">
               <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-5xl text-blue-600 mb-8 shadow-lg">
                 <FaPaperPlane />
@@ -252,7 +225,7 @@ function Contact() {
                 Let's Connect!
               </h2>
 
-              <p className="text-gray-600 text-lg leading-9 mb-10">
+              <p className="text-gray-600 text-lg leading-9 mb-10 text-justify">
                 Have a question or want to work together? Fill out the form and
                 I’ll connect with you soon.
               </p>

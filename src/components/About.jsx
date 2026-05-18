@@ -1,5 +1,5 @@
 import { FaBriefcase, FaBuilding, FaCode, FaGraduationCap, FaPenNib, FaUserTie } from "react-icons/fa";
-import { experiencePoints, PROFILE } from "./common/constant";
+import { experiencePoints, PROFILE } from "./common/Constant";
 // import { BiBriefcaseAlt } from "react-i  
 import { GraduationCap, Briefcase, Code2 } from "lucide-react";
 function About() {
@@ -23,7 +23,7 @@ function About() {
     streamWithCgpa = " Electrical Engineering: 8.73 / 10 ",
   } = PROFILE || {};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-4 py-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 px-1 py-1 mt-4">
       {/* Main Container */}
       <div className="max-w-7xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden">
         {/* Hero Section */}
@@ -59,20 +59,20 @@ function About() {
               </div>
 
               <div className="space-y-5 text-gray-700 text-base leading-8">
-                <p>
+                <p><span>• </span>
                   Results-driven Full Stack Software Engineer experienced in
                   enterprise-level application development and {industry.trim()}.
                 </p>
 
-                <p>
+                <p><span>• </span>
                   Strong backend expertise in {backend.replaceAll(" |",",")} architecture.
                 </p>
 
-                <p>
+                <p><span>• </span>
                   Experienced in frontend technologies including {frontend.replaceAll(" |",",")}.
                 </p>
 
-                <p>
+                <p><span>• </span>
                   Passionate about clean architecture, API optimization,
                   scalable systems and user-friendly UI development.
                 </p>
@@ -185,7 +185,7 @@ function About() {
                 </div>
               </div>
 
-              <div className="space-y-4 text-gray-700 text-base leading-7">
+              <div className="space-y-4 text-gray-700 text-base leading-7 text-justify">
                 {experiencePoints?.map((point, index) => (
                   <p key={index}>
                     ✔ {point}

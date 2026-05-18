@@ -4,7 +4,7 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import SocialButtons from "./SocialButtons";
 import TechTags from "./TechTags";
-import { PROFILE } from "./common/constant";
+import { PROFILE } from "./common/Constant";
 
 function Home() {
   const {
@@ -23,7 +23,7 @@ function Home() {
   return (
     <section className="min-h-screen bg-gray-100">
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto grid  px-4 py-4 md:grid-cols-[1.5fr_1fr] gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-[1.5fr_1fr] gap-12 items-center px-2 py-2 mt-4">
         {/* Left Content */}
         <div className="space-y-6 text-center md:text-left">
           {/* Welcome */}
@@ -87,11 +87,11 @@ function Home() {
         </div>
 
         {/* Right Image */}
-        <div className="flex flex-col items-center-safe">
+        <div className="flex flex-col items-center-safe md:mt-10">
           <img
             src={bed}
             alt={name}
-            className="mt-10 w-full max-w-[500px] sm:max-w-[410px] md:max-w-[450px] h-[500px] md:h-[460px] rounded-3xl shadow-2xl object-cover hover:scale-[1.02] transition duration-500"
+            className="md:mt-10 w-full max-w-[500px] sm:max-w-[410px] md:max-w-[450px] h-[500px] md:h-[460px] rounded-3xl shadow-2xl object-cover hover:scale-[1.02] transition duration-500"
           />
 
           {/* Social Buttons */}
